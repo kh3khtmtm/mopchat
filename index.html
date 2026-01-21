@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>مُخَطط المساعد الرقمي الذكي لوزارة التخطيط</title>
+
+  <!-- إعداد الودجت -->
+  <script>
+    window.mokhattConfig = {
+      webhookUrl: "https://newbie-bones-qty-acts.trycloudflare.com/webhook/f6a1da69-1d0d-40f7-855a-ea327867f6e0",
+      title: "مُخطّط",
+      position: "left",
+      primaryColor: "#0B3D91",
+      welcomeMessage: "مرحباً! شنو تحب تسأل؟"
+    };
+  </script>
+
+  <!-- تحميل الودجت -->
+  <script defer src="https://kh3khtmtm.github.io/mokhatt-widget/mokhatt-widget.js"></script>
+
+  <style>
+    :root {
+      --bg-light: #f1f1f1;
+      --bg-dark: #121212;
+      --text-light: #000;
+      --text-dark: #eee;
+      --button-bg-light: #0d6efd;
+      --button-bg-dark: #1a73e8;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      direction: rtl;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .toggle-dark {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      background: var(--button-bg-light);
+      color: white;
+    }
+    body.dark-mode .toggle-dark { background: var(--button-bg-dark); }
+
+    /* محتوى بسيط بدل الشات الداخلي */
+    .page {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .card {
+      width: min(720px, 92vw);
+      background: rgba(255,255,255,.9);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+    body.dark-mode .card {
+      background: rgba(30,30,30,.9);
+    }
+    .title {
+      margin: 0 0 10px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .desc {
+      margin: 0;
+      line-height: 1.9;
+      opacity: .85;
+      font-size: 14px;
+    }
+    .hint {
+      margin-top: 12px;
+      font-size: 13px;
+      opacity: .9;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="toggle-dark" onclick="toggleDarkMode()">🌓</button>
+
+  <main class="page">
+    <div class="card">
+      <h1 class="title">🤖 مُخَطط المساعد الرقمي الذكي لوزارة التخطيط</h1>
+      <p class="desc">
+        هذه واجهة الموقع. تم إضافة زر المحادثة (الودجت) أسفل الصفحة.
+        اضغط على 💬 وابدأ السؤال.
+      </p>
+      <div class="hint">💡 زر المحادثة يظهر أسفل اليسار.</div>
+    </div>
+  </main>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
